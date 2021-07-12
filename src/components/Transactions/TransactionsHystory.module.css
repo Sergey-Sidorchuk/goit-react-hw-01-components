@@ -24,6 +24,11 @@ td {
   padding: 10px 20px;
   color: #3d3b3bf1;
 }
+th,
+td {
+  border: 1px solid rgb(0, 0, 0);
+}
+
 tr:nth-child(2n) {
   background-color: #e7fffd;
 }
