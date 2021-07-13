@@ -13,9 +13,7 @@ function randomColor() {
 const Statistic = ({ title, stats }) => {
   return (
     <section className={styles.statistics}>
-      <h2 style={{ color: randomColor() }} className={styles.title}>
-        {title}
-      </h2>
+      {title && <h2 className="title">{title}</h2>}
       <ul className={styles.statList}>
         {stats.map(({ label, percentage, id }) => (
           <li
@@ -31,6 +29,10 @@ const Statistic = ({ title, stats }) => {
     </section>
   );
 };
+
+Statistic.defaultProps = {
+      title: '',
+}
 
 Statistic.propTypes = {
   title: PropTypes.string,
